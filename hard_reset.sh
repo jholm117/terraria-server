@@ -1,6 +1,9 @@
 #!/bin/bash
+terraria_dir="$(dirname "$(dirname "$(realpath $0)")")"
+repo_dir="$terraria_dir/terraria-server"
+cd "$repo_dir"
+
 git checkout .
 git fetch origin
 git reset --hard origin/master
-terraria_dir="$(dirname "$(dirname "$(realpath $0)")")"
-"$terraria_dir/terraria-server/load.sh"
+"$repo_dir/load.sh"

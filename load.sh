@@ -1,6 +1,5 @@
 #!/bin/bash
-
-terraria_dir="$(dirname "$(dirname "$(realpath $0)")")"
+terraria_dir="$(dirname "$(dirname "$(realpath "$0")")")"
 repo_dir="$terraria_dir/terraria-server"
 cd "$repo_dir"
 git pull --ff-only
